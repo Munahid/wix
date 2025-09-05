@@ -79,6 +79,7 @@ jobs:
         run: 7z a build\testresults.zip @src\testresultfilelist.txt
 
       - name: Save build
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: artifacts
